@@ -1,50 +1,46 @@
-# 11ty Netlify Jumpstart
+# 11straps = 11ty + Bootstrap5
 
-> Created by Stephanie Eckles ([@5t3ph](https://twitter.com/5t3ph))
+[![Netlify Status](https://api.netlify.com/api/v1/badges/64b42b0c-aeba-4583-b023-202fcdf571bb/deploy-status)](https://app.netlify.com/sites/11straps-demo/deploys)
 
-Visit [11ty-netlify-jumpstart.netlify.app](https://11ty-netlify-jumpstart.netlify.app/) for all the feature details - or go ahead and [generate a new repo from the template](https://github.com/5t3ph/11ty-netlify-jumpstart/generate) to view the information locally.
+**Live Demo**: <a href="https://11straps.com" target="_blank">11straps.com</a>
 
-## Quick Start
+## What is 11straps?
+11straps is a simple boilerplate. It combines the static site generator <a href="https://www.11ty.dev/" target="_blank">11ty</a> with the CSS framework <a href="https://getbootstrap.com/" target="_blank">Bootstrap 5</a> and is stitched together with some npm and Gulp magic dust. It minifies and purges the CSS file (so it removes any unused CSS) and comes with a static server and browser sync support for your local development.
 
-1. [Generate a repo from this template](https://github.com/5t3ph/11ty-netlify-jumpstart/generate)
-   which will copy this project into your own new repo _if you are currently signed in to GitHub_. Alternatively, [visit the repo directly](https://github.com/5t3ph/11ty-netlify-jumpstart).
+## Requirements
+You need Node (at least v8+) on your computer. To check if you have node and what version run this command in your terminal:
+```
+node --version
+```
 
-1. Once cloned, run `npm install` to install 11ty and other dependencies. Then run `npm start` to run both 11ty and sass in watch
-   mode. Use `npm run build` to run a production version, which will also generate social share
-   preview images.
+## Want to try it out now?
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/holger1411/11straps)
 
-1. Open `src/_data/meta.js` and adjust the values to your details.
+## Installation
+Download and extract the [latest release](https://github.com/holger1411/11straps/releases) or checkout the main branch of this repo.
+Fire up your terminal, go to the new folder and run:
+```
+npm install
+```
+Now you are good to go.
 
-1. Review the [styling documentation](https://5t3ph.github.io/html-sass-jumpstart/) for the included minimal
-   Sass framework, particularly the theme variables, to quickly customize the starter.
+## Build it for dev
+To build your static website for local development run:
+```
+npm run build-dev
+```
+This will build the static website into the `/dev` folder without all the minifiying and purging stuff (<- much faster and a more human friendly code output, but a much bigger package)
 
-1. Edit `src/index.njk` to change the home page - including changing the template type if desired -
-   and then create content within `_pages` using any templating format you prefer to add content.
+## Run in dev mode
+To run the build-dev task automatically on file changes run:
+```
+npm run watch
+```
+That will run a local server from `/dev` folder and connects browser sync to it. On changes within the `/src` folder it will run the `npm run build-dev` command automatically and will refresh your browser.
 
-1. Check out the [About page](https://11ty-netlify-jumpstart.netlify.app/about/) for expanded details on included features of this starter.
-
-1. Review the [11ty documentation](https://11ty.dev) to more deeply apply customizations, including
-   adding custom data sources and reviewing what template languages are available.
-
-### Is Netlify hosting required?
-
-It's not required, but highly recommended, and is also how the build process is setup to run
-against.
-
-## Development Scripts
-
-**`npm start`**
-
-> Run 11ty with hot reload at localhost:8080
-
-**`npm run build`**
-
-> Production build includes minified, autoprefixed CSS and social preview image generation
-
-Use this as the "Publish command" if needed by hosting such as Netlify.
-
-## Feedback welcome!
-
-You can [file it as an issue](https://github.com/5t3ph/11ty-netlify-jumpstart/issues).
-
-[![Buy me a coffee](https://cdn.buymeacoffee.com/buttons/default-violet.png)](https://www.buymeacoffee.com/moderncss)
+## Build it for prod
+If you are done with your dev work and happy with it its time to deploy your static website into the wild wild west (www). To build your static website for a prod deployment run:
+```
+npm run build
+```
+That will output the full site, with purged and minified CSS and minified html. The output will be stored in the `/public` folder.
