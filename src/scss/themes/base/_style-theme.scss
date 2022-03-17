@@ -87,3 +87,31 @@ body {
   padding-top:14vh;
   padding-bottom:14vh;
 }
+
+.glass {
+  background: rgba( 26, 38, 115, 0.5 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 5.5px );
+  -webkit-backdrop-filter: blur( 5.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+blockquote {
+  background: rgba( 26, 38, 115, 0.6 );
+  border-left: 4px solid white;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+#roadmap main ul > li {
+  font-size:x-large
+}
+
+#roadmap main li li {
+  font-size:initial;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fd7e14;
+}

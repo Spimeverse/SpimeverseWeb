@@ -9,3 +9,9 @@
   <!-- build:css -->
   <link rel="stylesheet" href="{{ '/css/theme.css' | url }}">
    <!-- endbuild -->
+   <style>
+    body {
+      background-color: {{ backgroundcolor or '#010101' }};
+    }
+    {% backgroundImage backgroundurl, backgroundcolor or '#010101' %}
+    </style>
