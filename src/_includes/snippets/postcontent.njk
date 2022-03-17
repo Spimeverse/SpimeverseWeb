@@ -1,5 +1,5 @@
-<article>
-      <header class="border-bottom pb-4 mb-4">
+<article class ="glass p-4">
+      <header class="pb-4 mb-4">
         <h1 class="display-1">{{ title }}</h1>
         {% block extraArticleHeader %}
           {% set wc = content | striptags | wordcount %}
@@ -13,12 +13,12 @@
           </p>
           {%- for tag in tags | filterTagList -%}
             {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
-            <a href="{{ tagUrl | url }}" class="btn btn-outline-dark btn-sm me-2">{{ tag }}</a>
+            <a href="{{ tagUrl | url }}" class="btn btn-outline-light btn-sm me-2">{{ tag }}</a>
           {%- endfor %}
 
         {% endblock %}
       </header>
-      <p class="lead">
+      <p class="lead h-2 fw-bold">
         {{ summary }}
       </p>
       {{ content | safe }}

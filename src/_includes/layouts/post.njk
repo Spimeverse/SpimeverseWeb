@@ -3,6 +3,17 @@
 
   <head>
     {% include 'snippets/head.njk' %}
+        <style>
+      article img {
+        display: block;
+        margin: 0px auto;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        border: 1px solid #FFF8;
+        padding: 2px;
+      }
+    </style>
   </head>
 
   <body>
@@ -11,11 +22,11 @@
 
     <main class="container py-vh-5">
       <div class="row d-flex justify-content-between">
-        <div class="col-12 col-md-7">
+        <div class="fs-5 col-12 col-xl-7">
           {% include 'snippets/postcontent.njk' %}
         </div>
 
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-xl-4">
           {% include 'snippets/blogsidebar.njk' %}
         </div>
 

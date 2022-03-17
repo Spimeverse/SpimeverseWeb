@@ -1,9 +1,13 @@
 <div class="row border-top py-5">
-  <div class="col-12">
-    <p class="">
-    <img src="{{ '/img/DocVoxel 64.png' | url }}" alt="DocVoxel greybead developer & founder" height="64" class="float-left mt-1 me-3 gradient-rounded">
-    Made by 
-      <a href="https://github.com/DocVoxel" class="link-fancy">DocVoxel</a></p>
+  <div class="glass d-flex flex-wrap">
+      <div class="d-flex flex-fill align-items-center">
+      <img style="margin:0;padding:5px;" src="{{ '/img/DocVoxel 64.png' | url }}" alt="DocVoxel greybead developer & founder" height="64">
+        &nbsp; Made&nbsp; by &nbsp;  
+        <a href="https://github.com/DocVoxel" class="link-fancy">DocVoxel</a>
+      </div>
+      {% if backgroundcredit %}
+      <div class="d-flex align-items-center">{{ backgroundcredit | safe }}</div>
+      {% endif %}
   </div>
 </div>
 
