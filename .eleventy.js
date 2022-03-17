@@ -3,6 +3,7 @@ const navigationPlugin = require('@11ty/eleventy-navigation')
 const rssPlugin = require('@11ty/eleventy-plugin-rss')
 const imagePlugin = require("@11ty/eleventy-img");
 const path = require('path');
+const fs = require('fs');
 const markdownIt = require('markdown-it')
 const markdownItAttrs = require('markdown-it-attrs')
 
@@ -22,6 +23,9 @@ const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs);
 const imageShortcode = async (src, alt, sizes, title) => {
   if (alt === undefined)
     throw new Error(`Missing "alt" on responsive image from: ${src}`);
+
+  if (!fs.existsSync(src))
+    throw new Error(`Can't find img: ${src}`);
 
   const metadata = await imagePlugin(src, {
     widths:imageSettings.widths,
@@ -50,6 +54,9 @@ const imageShortcode = async (src, alt, sizes, title) => {
 const responsiveBackgroundShortCode = async (src, bgColor) => {
   if (!src)
     return "";
+
+  if (!fs.existsSync(src))
+    throw new Error(`Can't find background img: ${src}`);
 
   let stats = await imagePlugin(src, {
     formats: ["webp"],
