@@ -27,28 +27,33 @@ const imageShortcode = async (src, alt, sizes, title) => {
   if (!fs.existsSync(src))
     throw new Error(`Can't find img: ${src}`);
 
-  const metadata = await imagePlugin(src, {
-    widths:imageSettings.widths,
-    formats:imageSettings.formats,
-    urlPath: "/img/built/",
-		outputDir: "dev/img/built/",
-  });
+  try {
+      const metadata = await imagePlugin(src, {
+        widths:imageSettings.widths,
+        formats:imageSettings.formats,
+        urlPath: "/img/built/",
+        outputDir: "dev/img/built/",
+      });
 
-  const markup = imagePlugin.generateHTML(metadata, {
-    alt,
-    sizes,
-    loading: "lazy",
-    decoding: "async",
-  });
+      const markup = imagePlugin.generateHTML(metadata, {
+        alt,
+        sizes,
+        loading: "lazy",
+        decoding: "async",
+      });
 
-  if (title !== undefined)
-    return `<div class="row">
-    <div class="col-12 d-flex justify-content-center text-center flex-column">
-      ${markup}
-      <sup class="mb-2 mt-3" >${title}</sup>
-    </div></div>`;
-  else
-  return markup;
+      if (title !== undefined)
+        return `<div class="row">
+        <div class="col-12 d-flex justify-content-center text-center flex-column">
+          ${markup}
+          <sup class="mb-2 mt-3" >${title}</sup>
+        </div></div>`;
+      else
+      return markup;
+  }
+  catch (e) {
+    throw new Error(`Error with image ${src} because ${e}`);
+  }
 };
 
 const responsiveBackgroundShortCode = async (src, bgColor) => {
@@ -58,16 +63,21 @@ const responsiveBackgroundShortCode = async (src, bgColor) => {
   if (!fs.existsSync(src))
     throw new Error(`Can't find background img: ${src}`);
 
-  let stats = await imagePlugin(src, {
-    formats: ["webp"],
-    widths: [320,700,1300,2500],
-    urlPath: "/img/built/",
-		outputDir: "dev/img/built/",
-  });
+  try {
+    let stats = await imagePlugin(src, {
+      formats: ["webp"],
+      widths: [320,700,1300,2500],
+      urlPath: "/img/built/",
+      outputDir: "dev/img/built/",
+    });
 
-  for (let i=1; i<4; i++) {
-    if (!stats.webp[i])
-      stats.webp[i]=stats.webp[i-1];
+    for (let i=1; i<4; i++) {
+      if (!stats.webp[i])
+        stats.webp[i]=stats.webp[i-1];
+    }
+  }
+  catch (e) {
+    throw new Error(`Error with background image ${src} because ${e}`);
   }
 
   const fullScreenBg = `background-size: cover;
