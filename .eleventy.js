@@ -63,8 +63,9 @@ const responsiveBackgroundShortCode = async (src, bgColor) => {
   if (!fs.existsSync(src))
     throw new Error(`Can't find background img: ${src}`);
 
+  let stats;
   try {
-    let stats = await imagePlugin(src, {
+    stats = await imagePlugin(src, {
       formats: ["webp"],
       widths: [320,700,1300,2500],
       urlPath: "/img/built/",
