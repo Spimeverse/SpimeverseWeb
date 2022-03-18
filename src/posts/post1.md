@@ -7,7 +7,7 @@ backgroundurl: ./src/img/shubham-dhage-nOkWMjfMhnc-unsplash.jpg
 backgroundcredit: background by&nbsp;<a href="https://unsplash.com/@theshubhamdhage?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shubham Dhage</a>&nbsp;on&nbsp;<a href="https://unsplash.com/@theshubhamdhage?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 ---
 
-{% image "./src/img/digital rain.png", "digital rain", "(max-width: 600px) 300px, 600px" %}
+{% image "./src/img/digital_rain.png", "digital rain", "(max-width: 600px) 300px, 600px" %}
 
 Now Facebook has become Meta the Metaverse is very much in vogue. But writers, filmmakers and artists have dreamed of virtual worlds for decades. [Tron](https://www.imdb.com/title/tt0084827/){target="_blank" rel="noopener"}, [the Matrix](https://www.imdb.com/title/tt0133093/?ref_=fn_al_tt_1){target="_blank" rel="noopener"}, William Gibson’s [Cyberspace](https://en.wikipedia.org/wiki/Burning_Chrome){target="_blank" rel="noopener"}, Neal Stephenson’s [Metaverse](https://en.wikipedia.org/wiki/Snow_Crash){target="_blank" rel="noopener"} and Hannu_Rajaniemi’s [SpimeScape](https://www.karangill.com/glossary-quantum-thief-fractal-prince-jean-le-flambeur/#Spimescape){target="_blank" rel="noopener"} to name but a few. These artists have given us a glimpse of digital worlds that are now becoming possible to create.
 
