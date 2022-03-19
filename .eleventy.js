@@ -184,6 +184,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addJavaScriptFunction("backgroundImage", responsiveBackgroundShortCode);
 
   eleventyConfig.addPassthroughCopy("dev/img");
+  eleventyConfig.addPassthroughCopy({ "src/root": "." });
 
   function filterTagList(tags) {
     return (tags || []).filter(tag => ["all", "nav"].indexOf(tag) === -1);

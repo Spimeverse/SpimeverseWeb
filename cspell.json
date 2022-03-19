@@ -1,0 +1,22 @@
+{
+    "version": "0.2",
+    "ignorePaths": [],
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": [
+        "backgroundcredit",
+        "backgroundurl",
+        "dhage",
+        "metaverse",
+        "nbsp",
+        "roadmap",
+        "Shubham",
+        "Spime",
+        "Spimes"
+    ],
+    "ignoreWords": [],
+    "import": [],
+    "enableFiletypes": [
+        "nunjucks"
+    ]
+}

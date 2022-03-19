@@ -1,6 +1,6 @@
 ---
 layout: layouts/default.njk
-title: Roadmap/Features 🗺
+title: Roadmap
 backgroundurl: ./src/img/shubham-dhage-JD0mUVw-qHU-unsplash.jpg
 backgroundcredit: background by&nbsp;<a href="https://unsplash.com/@theshubhamdhage?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shubham Dhage</a>&nbsp;on&nbsp;<a href="https://unsplash.com/@theshubhamdhage?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 ---
