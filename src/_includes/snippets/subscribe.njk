@@ -1,0 +1,49 @@
+<div class = "row my-2">
+<div class = "glass col p-4" id="subscribePanel">
+    <h2>Mailing list</h2>
+    <p>Subscribe to our mailing list for new updates. We hate spam, your email address will not be shared with anyone else. Unsubscribe at any time.</p>
+<form class="email-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+  <div hidden aria-hidden="true">
+    <label>
+      Don’t fill this out if you're human: 
+      <input name="bot-field" />
+    </label>
+  </div>
+  <div class="row">
+    <div class = "col">
+    <label for="name">name:</label><br>
+    <input type="text" name="name" placeholder="Name"  id="name" />
+    </div>
+    <div class = "col">
+    <label for="email">email:</label><br>
+    <input type="email" name="email" placeholder="Email"  id="email" required />
+    </div>
+    </div>
+      <div class="row">
+    <div class = "col">
+    <button class ="col my-3" type="submit">Subscribe</button>
+  </div>
+</form>
+</div>
+</div>
+
+<script>
+document
+  .querySelector("form")
+  .addEventListener("submit", handleSubmit);
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  let myForm = document.getElementById("pizzaOrder");
+  let formData = new FormData(myForm);
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => myForm.innerHTML = `<div class="bg-success">Almost there! Check your inbox for a confirmation e-mail.</div>`;
+    .catch((error) =>myForm.innerHTML = `<div class="bg-danger">Error: ${error}</div>`;
+};
+
+</script>
+
