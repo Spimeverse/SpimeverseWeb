@@ -21,7 +21,11 @@
       background-color: {{ backgroundcolor or '#010101' }};
     }
     {% backgroundImage backgroundurl, backgroundcolor or '#010101' %}
-    @import url('/fonts/Audiowide-Regular.ttf');
+
+    @font-face {
+      font-family: Audiowide;
+      src('/fonts/Audiowide-Regular.ttf')   format('truetype');
+    }
     
     h1,h2, .FancyHeading {
       font-family: 'Audiowide', cursive;
