@@ -16,3 +16,9 @@
   command = "npm run build"
 
   functions = "./functions"
+
+[[plugins]]
+  package = "netlify-plugin-checklinks"
+
+  [plugins.inputs]
+    skipPatterns = ['https://fonts.gstatic.com']
