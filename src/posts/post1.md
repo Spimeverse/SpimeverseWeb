@@ -2,7 +2,7 @@
 title: Enter the Metaverse
 date: 2022-01-01
 summary: I have a dream of building an open technology that anyone can use to build virtual worlds. Worlds they can create and share as easily as creating a web page.
-tags: ["Design","IPFS","Babylonjs","Signed Distance Fields","Spimes"]
+tags: ["Articles","IPFS","Babylonjs","Signed Distance Fields","Spimes"]
 backgroundurl: ./src/img/shubham-dhage-nOkWMjfMhnc-unsplash.jpg
 backgroundcredit: background by&nbsp;<a href="https://unsplash.com/@theshubhamdhage?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shubham Dhage</a>&nbsp;on&nbsp;<a href="https://unsplash.com/@theshubhamdhage?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 ---
