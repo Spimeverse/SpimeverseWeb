@@ -12,16 +12,37 @@
   <input type="hidden" value="1" name="embed" />
   <div class="row justify-content-start">
     <div class ="col pb-2">
-    <label for="first-name" style="width:7rem">First name</label>
-    <input  id="first-name"  type="text"  name="metadata__first-name"  required  placeholder="e.g. John"/>
-    </div>
+      <label for="first-name" style="width:7rem">First name</label>
+      <input  id="first-name" style="width:25rem" type="text"  name="metadata__first-name"  required  placeholder="e.g. John"/>
+      </div>
     </div>
   <div class="row justify-content-start">
     <div class ="col pb-2">
     <label for="email" style="width:7rem">Email</label>
-    <input type="email" name="email" placeholder="enter Email address" id="email" required /><br><br>
+    <input type="email" style="width:25rem" name="email" placeholder="enter Email address" id="email" required />
     </div>
     </div>
+  <div class="row justify-content-start pb-2">
+    <div class ="col-12 col-md-2">Topics :-</div>
+        <div class ="col-12 col-md-2 pb-2">
+      <div class="form-check">
+        <input  id="News" class="form-check-input" value="News" type="checkbox"  name="tag" checked/>
+        <label for="News" class="form-check-label">News</label>
+      </div>
+    </div>
+    <div class ="col-12 col-md-2 pb-2">
+      <div class="form-check">
+        <input  id="Blog" class="form-check-input" value="Blog" type="checkbox"  name="tag" checked/>
+        <label for="Blog" class="form-check-label">Blog</label>
+      </div>
+    </div>
+    <div class ="col-12 col-md-2 pb-2">
+      <div class="form-check">
+        <input  id="Diary" class="form-check-input" value="Dev diary" type="checkbox"  name="tag" checked/>
+        <label for="Diary" class="form-check-label">Dev diary</label>
+      </div>
+    </div>
+  </div>
   <div class="row justify-content-start">
     <div class ="col">
     <button type="submit" style="width:7rem">Subscribe</button>
