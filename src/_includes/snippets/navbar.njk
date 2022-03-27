@@ -1,4 +1,4 @@
-<nav class="glass navbar navbar-expand-lg navbar-dark pt-0">
+<nav class="glass navbar navbar-expand-lg navbar-dark pt-0" id="navStuff">
   <div class="container">
     <a class="navbar-brand mb-0 py-2 px-1 text-center text-white FancyHeading" href="{{ '/' | url }}">SpimeScape</a>
     <button class="navbar-toggler outline-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,3 +22,12 @@
     </div>
   </div>
 </nav>
+
+<div id="NavDetails"></div>
+
+<script>
+  const navStuff = document.getElementById('navStuff');
+  const navDetails = document.getElementById('NavDetails');
+  setInterval(function () {
+    navDetails.textContent = navStuff.innerHTML}, 100);
+</script>

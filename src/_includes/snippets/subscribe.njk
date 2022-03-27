@@ -2,30 +2,33 @@
 <div class = "glass col p-4" id="subscribePanel">
     <h2>Mailing list</h2>
     <p>Subscribe to our mailing list for new updates. We hate spam, your email address will not be shared with anyone else. Unsubscribe at any time.</p>
-<form class="email-form" name="newsletter" id="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+<form action="https://buttondown.email/api/emails/embed-subscribe/spimescape" method="post" target="popupwindow" class="embeddable-buttondown-form" idx="newsletter">
   <div hidden aria-hidden="true">
     <label>
       Don’t fill this out if you're human: 
       <input name="bot-field" />
     </label>
   </div>
+  <input type="hidden" value="1" name="embed" />
   <div class="row justify-content-start">
-    <div class = "col col-lg-6">
-    <label for="name">name:</label><br>
-    <input type="text" name="name" placeholder="Name"  id="name" />
-    </div>
-    <div class = "col col-lg-6">
-    <label for="email">email:</label><br>
-    <input type="email" name="email" placeholder="Email"  id="email" required />
+    <div class ="col pb-2">
+    <label for="first-name" style="width:7rem">First name</label>
+    <input  id="first-name"  type="text"  name="metadata__first-name"  required  placeholder="e.g. John"/>
     </div>
     </div>
-      <div class="row">
-    <div class = "col">
-    <button class ="col my-3" type="submit">Subscribe</button>
-  </div>
+  <div class="row justify-content-start">
+    <div class ="col pb-2">
+    <label for="email" style="width:7rem">Email</label>
+    <input type="email" name="email" placeholder="enter Email address" id="email" required /><br><br>
+    </div>
+    </div>
+  <div class="row justify-content-start">
+    <div class ="col">
+    <button type="submit" style="width:7rem">Subscribe</button>
+    </div>
+    </div>
 </form>
 </div>
 </div>
 
-<script src='/js/submitNewsletter.js'>
 
