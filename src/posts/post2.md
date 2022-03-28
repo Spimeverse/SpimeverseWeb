@@ -14,7 +14,8 @@ After a few false starts fighting with other alternatives.  I eventually settled
 
 > ## Just a simple website and mailing list. what could go wrong?
 
-![Wrestling with the problem](https://media.giphy.com/media/k2l3KtdzFUONG/giphy.gif "gify.com")
+{% image "https://media.giphy.com/media/k2l3KtdzFUONG/giphy.gif", "Wrestling with the problem", "", "Photo by gify.com" %}
+
 
 Well sorta! I've made plenty of websites, in all sort of technologies and so I expected this to a walk in the park. But getting the setup right to generate responsive images, learning exactly how data cascaded data, setting up forms to post to netlify, then realising I could setup the mailing list directly on [buttondown](https://buttondown.email/) and keep costs down. Wrestling with Dns settings to mail from the SpimeScape domain which I accidently tried to wire up to Spime**Space** which of course didn't work🤦‍♂️.
 

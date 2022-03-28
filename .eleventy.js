@@ -24,23 +24,30 @@ const imageShortcode = async (src, alt, sizes, title) => {
   if (alt === undefined)
     throw new Error(`Missing "alt" on responsive image from: ${src}`);
 
-  if (!fs.existsSync(src))
+  if (src && !src.startsWith('http') && !fs.existsSync(src))
     throw new Error(`Can't find img: ${src}`);
 
   try {
-      const metadata = await imagePlugin(src, {
-        widths:imageSettings.widths,
-        formats:imageSettings.formats,
-        urlPath: "/img/built/",
-        outputDir: "dev/img/built/",
-      });
+      let markup;
+      if (src.endsWith('.gif')) {
+        markup = `<img src='${src}' alt='${title}'/>`;
+      }
+      else
+      {
+        const metadata = await imagePlugin(src, {
+          widths:imageSettings.widths,
+          formats:imageSettings.formats,
+          urlPath: "/img/built/",
+          outputDir: "dev/img/built/",
+        });
 
-      const markup = imagePlugin.generateHTML(metadata, {
-        alt,
-        sizes,
-        loading: "lazy",
-        decoding: "async",
-      });
+        markup = imagePlugin.generateHTML(metadata, {
+          alt,
+          sizes,
+          loading: "lazy",
+          decoding: "async",
+        });
+      }
 
       if (title !== undefined)
         return `<div class="row">
