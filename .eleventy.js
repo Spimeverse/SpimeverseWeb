@@ -21,12 +21,16 @@ const markdownItOptions = {
 }
 const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs);
 
+const checkImgExists = (src) => {
+  if (src && !src.startsWith('http') && !fs.existsSync(src))
+    throw new Error(`Can't find img: ${src}`);
+}
+
 const imageShortcode = async (src, alt, sizes, title) => {
   if (alt === undefined)
     throw new Error(`Missing "alt" on responsive image from: ${src}`);
 
-  if (src && !src.startsWith('http') && !fs.existsSync(src))
-    throw new Error(`Can't find img: ${src}`);
+  checkImgExists(src);
 
   try {
       let markup;
@@ -78,13 +82,12 @@ const responsiveBackgroundShortCode = async (src, bgColor) => {
   if (!src)
     return "";
 
-  if (!fs.existsSync(src))
-    throw new Error(`Can't find background img: ${src}`);
+  checkImgExists(src);
 
   let stats;
   try {
     stats = await imagePlugin(src, {
-      formats: ["webp"],
+      formats: ["webp","jpeg"],
       widths: [320,700,1300,2500],
       urlPath: "/img/built/",
       outputDir: "dev/img/built/",
