@@ -4,8 +4,9 @@ const rssPlugin = require('@11ty/eleventy-plugin-rss')
 const imagePlugin = require("@11ty/eleventy-img");
 const path = require('path');
 const fs = require('fs');
-const markdownIt = require('markdown-it')
-const markdownItAttrs = require('markdown-it-attrs')
+const markdownIt = require('markdown-it');
+const markdownItAttrs = require('markdown-it-attrs');
+const EleventyFetch = require("@11ty/eleventy-fetch");
 
 const imageSettings = {
   "widths": [300, 600, 1280],
@@ -29,8 +30,18 @@ const imageShortcode = async (src, alt, sizes, title) => {
 
   try {
       let markup;
+      // image plugin seems to lose animation for .gif
+      // just cache and serve as is
       if (src.endsWith('.gif')) {
-        markup = `<img src='${src}' alt='${title}'/>`;
+        let imageBuffer = await EleventyFetch(src, {
+          duration: "1d",
+          type: "buffer",
+        });
+        let details = await new EleventyFetch.AssetCache(src);
+        fs.writeFile(`dev/img/built/${details._hash}.gif`, imageBuffer, function (err) {
+          if (err) return console.log(err);
+        });
+        markup = `<img src='/img/built/${details._hash}.gif' alt='${title}'/>`;
       }
       else
       {
