@@ -1,13 +1,13 @@
 ---
-title: Dev journal genesis
+title: Dev journal - the story so far...
 date: 2022-03-29
-summary: First steps. Laying a foundation for the world with signed distance fields.
+summary: First steps. Laying the foundation for a world built from signed distance fields.
 tags: ["Dev journal","Signed Distance Fields"]
 backgroundurl: https://unsplash.com/photos/kkHazzbrpCs/download?force=true
 backgroundcredit: background by&nbsp;<a href="https://unsplash.com/@theshubhamdhage?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shubham Dhage</a>&nbsp;on&nbsp;<a href="https://unsplash.com/@theshubhamdhage?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 ---
 
-I've been working on one of the core elements of SpimeScape for a little while now. Namely converting signed distance fields (SDF's) into meshes. SDF's deserve a post all to themselves, but briefly the allow us to define shapes as solid volumes and easily combine them together to build more complex shapes, they're also great for detecting collisions, level of detail, calculating shadows and visibility... like a said a post in their own right. For all these reasons the plan is to use SDF's for all objects and terrain in SpimeScape.
+I've been working on one of the core elements of SpimeScape for a little while now. Namely converting signed distance fields (SDF's) into meshes. SDF's deserve a post all to themselves, but briefly they allow us to define shapes as solid volumes and easily combine them together to build more complex shapes, they're also great for detecting collisions, level of detail, calculating shadows and visibility... like I said, a post in their own right. For all these reasons the plan is to use SDF's for all objects and terrain in SpimeScape.
 
 SDF's define objects such as cubes and spheres as equations, and we need a way to turn those equations into pixels. This can be performed in shaders pixel by pixel to amazing effect in [examples such as this](https://www.shadertoy.com/view/Xds3zN){target="_blank" rel="noopener"} by [Inigo Quilez](https://www.iquilezles.org/){target="_blank" rel="noopener"} however doing this at VR framerates is not really practical right now.
 
