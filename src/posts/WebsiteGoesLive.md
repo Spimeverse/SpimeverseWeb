@@ -8,7 +8,7 @@ backgroundcredit: background by&nbsp;<a href="https://unsplash.com/@theshubhamdh
 ---
 I took a little break from building SpimeScape itself to put together a really '*simple*' website, perhaps with a little mailing list that could be a place to promote the project and let people know how things were going on.
 
-I wanted to use a static site generator so it would be fast and not have any hard dependences on particular webhosting platforms and could grow along with the project.
+I wanted to use a static site generator so it would be fast and not have any hard dependencies on particular web hosting platforms and could grow along with the project.
 
 After a few false starts fighting with other alternatives.  I eventually settled on [11ty](https://www.11ty.dev/). It's a great SSG that doesn't depend on React, Angular or other components. Just a templating language some markdown and a little bit of jscript logic.
 
@@ -17,7 +17,7 @@ After a few false starts fighting with other alternatives.  I eventually settled
 {% image "https://media.giphy.com/media/k2l3KtdzFUONG/giphy.gif", "Wrestling with the problem", "", "Photo by gify.com" %}
 
 
-Well sorta! I've made plenty of websites, in all sort of technologies and so I expected this to a walk in the park. But getting the setup right to generate responsive images, learning exactly how data cascaded data, setting up forms to post to netlify, then realising I could setup the mailing list directly on [buttondown](https://buttondown.email/) and keep costs down. Wrestling with Dns settings to mail from the SpimeScape domain which I accidently tried to wire up to Spime**Space** which of course didn't work🤦‍♂️.
+Well sorta! I've made plenty of websites, in all sort of technologies and so I expected this to a walk in the park. But getting the setup right to generate responsive images, learning exactly how data cascaded data, setting up forms to post to netlify, then realizing I could setup the mailing list directly on [buttondown](https://buttondown.email/) and keep costs down. Wrestling with Dns settings to mail from the SpimeScape domain which I accidentally tried to wire up to Spime**Space** which of course didn't work🤦‍♂️.
 
 # The bottom line 
 Even with well documented and well designed tools. There's still a learning curve to get to achieve what you want. There's always a cost in time and effort for every new technology you add to your toolbelt. Don't ever expect a free lunch! 🍕

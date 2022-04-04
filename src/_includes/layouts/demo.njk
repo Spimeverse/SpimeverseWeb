@@ -1,0 +1,47 @@
+<!doctype html>
+<html class="h-100" lang="{{ metadata.language }}">
+
+  <head>
+    {% include 'snippets/head.njk' %}
+    <style>
+      #fullScreenButton {
+        position: absolute;
+        right:5px;
+        top:5px;
+      }
+    </style>
+  </head>
+
+  <body style="height:100%">
+    <div style="height:100%" class="d-flex flex-column">
+      <div>
+      {% include 'snippets/navbar.njk' %}
+      </div>
+
+      <div>
+      <main class="container">
+        <h2>{{ summary }}</h2>
+        <p>{{ content | safe }}</p>
+      </main>
+      </div>
+      <div id="canvasContainer" class="flex-grow-1 container" style="position:relative;">
+          <button id="fullScreenButton">Full Screen</button>
+          <canvas id = "renderCanvas" style="margin:auto"></canvas>
+      </div>
+    </div>
+<script type="module">
+  import { app } from "./indexExtern.js";
+
+  const fullScreenButton = document.getElementById('fullScreenButton');
+  fullScreenButton.addEventListener('click',() => {app.engine.enterFullscreen(true);});
+  const container = document.getElementById('canvasContainer');
+  const setCanvasSize = () => {
+        app.engine.setSize(container.offsetWidth, container.offsetHeight-10,true);
+    }
+  window.addEventListener("resize", setCanvasSize);
+  window.setTimeout(setCanvasSize,100);
+</script>
+
+  </body>
+
+</html>
