@@ -206,7 +206,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("dev/img");
   eleventyConfig.addPassthroughCopy({ "src/root": "." });
-  eleventyConfig.addPassthroughCopy("src/Demos");
+  eleventyConfig.addPassthroughCopy("src/demos");
 
   function filterTagList(tags) {
     return (tags || []).filter(tag => ["all", "nav"].indexOf(tag) === -1);
