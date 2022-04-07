@@ -33,13 +33,36 @@
   import { app } from "./indexExtern.js";
 
   const fullScreenButton = document.getElementById('fullScreenButton');
-  fullScreenButton.addEventListener('click',() => {app.engine.enterFullscreen(true);});
+  fullScreenButton.addEventListener('click',() => {
+    app.engine.enterFullscreen(true);
+  });
   const container = document.getElementById('canvasContainer');
   const setCanvasSize = () => {
-        app.engine.setSize(container.offsetWidth, container.offsetHeight-10,true);
+      let height = container.offsetHeight-10;
+      if (height < window.screen.height/2) { height = window.screen.height/2}
+      app.engine.setSize(container.offsetWidth, height,true);
+    };
+  const onFullScreenChange = () => {
+    const fullScreenElement =
+      document.fullscreenElement ||
+      document.mozFullScreenElement ||
+      document.webkitFullscreenElement;
+
+    // if in full screen mode fullScreenElement won't be null
+    if (fullScreenElement) {
+      app.engine.setSize(window.screen.width, window.screen.height,true);
     }
+    else { 
+      setCanvasSize();
+    }
+  }
+  document.addEventListener('fullscreenchange', onFullScreenChange, false);
+  document.addEventListener('webkitfullscreenchange', onFullScreenChange, false);
+  document.addEventListener('mozfullscreenchange', onFullScreenChange, false);
+
   window.addEventListener("resize", setCanvasSize);
   window.setTimeout(setCanvasSize,100);
+
 </script>
 
   </body>
