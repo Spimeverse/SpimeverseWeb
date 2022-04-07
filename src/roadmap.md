@@ -10,7 +10,7 @@ backgroundcredit: background by&nbsp;<a href="https://unsplash.com/@theshubhamdh
 ******
 
 - Voxels
-    - ☑ Generate detailed smooth meshes from naive surface nets
+    - ☑ Generate detailed smooth meshes from naive surface nets - [Demo](/demos/TwoChunksOneSphere/)
     - ☑ Optimize sampling recursively.
     - ▶ Add seams between chunks of different resolution
     - 🔜 Combine and blend shapes together
