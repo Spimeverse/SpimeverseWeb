@@ -23,7 +23,7 @@
     "clean-prod": "gulp clean-public"
   },
   "dependencies": {
-    "@11ty/eleventy": "1.0.0",
+    "@11ty/eleventy": "1.0.1",
     "@11ty/eleventy-fetch": "^3.0.0",
     "@netlify/functions": "^1.0.0",
     "@types/node": "^14.18.12",
