@@ -13,22 +13,22 @@ backgroundcredit: background by&nbsp;<a href="https://unsplash.com/@theshubhamdh
     - ✅ Generate detailed smooth meshes from naive surface nets - [Demo](/demos/TwoChunksOneSphere/)
     - ✅ Optimize sampling recursively.
     - ✅ Add seams between chunks of different resolution - [Demo](/demos/SeamlessChunkTransition/)
-    - 🔜 Combine and blend shapes together
+    - ▶️ Combine and blend shapes together
     - 🟦 Generate meshes with sharp features using dual contouring
     - 🟦 Multiple materials
 - Locomotion
     - ✅ Teleport
     - 🔜 Direct movement
     - 🟦 3rd Person Move avatar
-    - 🟦 Fly
+    - ▶️ Fly (Alpha)
 - Platforms
     - ✅ Desktop Browser
     - ✅ VR/Quest Browser
     - 🟦 Desktop native client
     - 🟦 Mobile native client
 - Terrain
-    - 🟦 Deformable with overhangs and tunnels
-    - 🟦 Combine chunks with multiple levels detail for massive Terrain
+    - ✅ Overhangs and tunnels
+    - ✅ Combine chunks with multiple levels detail for massive Terrain
     - 🟦 Terrain texturing
     - 🟦 Generate different biomes
     - 🟦 Terrain editor

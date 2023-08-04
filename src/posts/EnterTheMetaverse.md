@@ -49,4 +49,4 @@ Then there are techniques yet to be fully exploited in virtual worlds and games.
 
 Today is 01/01/2022, this is the start of the journey, and success is far from certain. There is MUCH to be done, but the barriers to doing something amazing have never been lower.
 
-Follow SpimeScape and see where it leads.
+Follow Spimeverse and see where it leads.

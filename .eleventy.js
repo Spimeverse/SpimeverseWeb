@@ -26,6 +26,10 @@ const checkImgExists = (src) => {
     throw new Error(`Can't find img: ${src}`);
 }
 
+const youtubeShortcode = (id) => {
+  return `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://www.youtube.com/embed/${id}?rel=0" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen scrolling="no" allow="encrypted-media; accelerometer; gyroscope; picture-in-picture"></iframe></div>`
+}
+
 const imageShortcode = async (src, alt, sizes, title) => {
   if (alt === undefined)
     throw new Error(`Missing "alt" on responsive image from: ${src}`);
@@ -200,6 +204,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
   eleventyConfig.addLiquidShortcode("image", imageShortcode);
   eleventyConfig.addJavaScriptFunction("image", imageShortcode);
+
+  eleventyConfig.addNunjucksAsyncShortcode("youtube", youtubeShortcode);
+  eleventyConfig.addLiquidShortcode("youtube", youtubeShortcode);
+  eleventyConfig.addJavaScriptFunction("youtube", youtubeShortcode);
+
 
   eleventyConfig.addNunjucksAsyncShortcode("backgroundImage", responsiveBackgroundShortCode);
   eleventyConfig.addJavaScriptFunction("backgroundImage", responsiveBackgroundShortCode);

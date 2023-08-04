@@ -45,7 +45,7 @@
     "typescript": "^4.6.2",
     "watch": "^1.0.2"
   },
-  "author": "Holger Koenemann",
+  "author": "DocVoxel",
   "devDependencies": {
     "@11ty/eleventy-img": "^1.1.0",
     "@11ty/eleventy-navigation": "^0.3.2",
